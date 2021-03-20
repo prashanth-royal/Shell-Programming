@@ -1,6 +1,6 @@
 #!/bin/bash -x
 
-echo -e "Enter Number : \c"
+echo -e "Enter Number" num
 read num
 for((i=2; i<=$num/2; i++))
 do
