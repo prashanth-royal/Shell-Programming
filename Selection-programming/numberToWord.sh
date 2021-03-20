@@ -8,5 +8,5 @@ elif [ "$character" = "2" ]
 then 
 	echo "Number is two"
 else
-	echo "You did not enter a number between 1 and 3"
+	echo "You did not enter a number between 1 and 2"
 fi
