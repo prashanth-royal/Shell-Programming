@@ -1,14 +1,13 @@
 #!/bin/bash -x
 
-declare -i m n
-m=60
+declare -i  n
 n=42
+in=inches
 ft=feet
-mt=meter
 
-read number ft "as" mt
-if [ $ft -eq $mt ];
+read number in "as" ft
+if [ $in -eq $ft ];
 then
- echo  "$m $ft = $[m/0.304] $mt"
+ echo  "$n $in = $[n/12] $ft"
 fi
 
