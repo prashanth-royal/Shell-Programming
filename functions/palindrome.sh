@@ -15,7 +15,7 @@ done
 echo $rev
 if [ $temp -eq $rev ]
 then
-	echo "number is polindrome"
+	echo "number is palindrome"
 else
-	echo "number not a polindrome"
+	echo "number not a palindrome"
 fi
