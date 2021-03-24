@@ -1,21 +1,20 @@
 #!/bin/bash -x
 
-echo Enter m and n
-read m and n
+echo "Enter the lower limit"
+read low
+echo "Enter the upper limit"
+read upper
 
-for a in $(seq $m $n)
+for mun in `seq $low $upper`
 do
-	k=0
-	for i in $(seq 2 $(expr$a - 1))
-	do
-		if [ $(expr $a % $i) -eq 0 ]
-		then
-			k=1
-			break
-		fi
-	done
-	if [ $k -eq 0 ]
-	then
-	echo $a
-	fi
+ret=$(factor $mun | grep $mun | cut -d ":" -f 2 | cut -d " " -f 2)
+
+if [ "$ret" -eq "$mun" ]
+then
+   echo "$mun is prime"
+   ((count++))
+fi
 done
+done
+   echo -e "\n There are $count number of prime numbers"
+

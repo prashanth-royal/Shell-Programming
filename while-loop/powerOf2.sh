@@ -5,8 +5,12 @@ read b
 echo "Enter the exponent of power"
 read p
 
-for ((i=1, pow=b; i<p; i++))
+for((i=1, pow=b; i<p; i++))
 do
 	((pow *=b))
-done
+if [ $pow -eq 256 ]
+then
 	echo $pow
+	exit
+fi
+done

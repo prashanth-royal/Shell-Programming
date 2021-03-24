@@ -1,7 +1,7 @@
 #!/bin/bash -x
 
 echo "Enter the number"
-num=13
+read num
 
 for (( i=2; i<=$num; i++ ))
 do

@@ -1,9 +1,10 @@
 #!/bin/bash -x
 
-echo "Enter a number"
+echo Enter harmonic number
 read num
- for (( i=1; i<=$n; i++ ))
-do
-	echo -n "$num"
-done
 
+for (( i=1; i<=num; i++ ))
+do
+	ans=( 1/$i )
+echo $ans
+done
