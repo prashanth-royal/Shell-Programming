@@ -1,22 +1,28 @@
 #!/bin/bash -x
 
 #constants
-HEADS_COUNT=10;
-TAILS_COUNT=10;
+num=11
 
 #variables
-heads=0;
-tails=0;
+heads=0
+tails=0
 
-while [[ $heads -le $HEADS_COUNT || $tails -le $TAILS_COUNT ]]
-do
-	FLIP=$(( (RANDOM %10) %2 ))
-	case $FLIP in
-
-	if [ $FLIP -eq 1 ]
-then
-	echo "heads"
-else
-	echo "tails"
-fi
+	while [ $heads -lt $num ] && [ $tails -lt $num ]
+	do
+				coinFlip=$((RANDOM%2))
+		if [ $coinFlip -eq 1 ]
+		then ((heads++))
+			echo HEADS
+								HEADS=$(($heads+1))
+		else ((tails++))
+			echo TAILS
+								TAILS=$(($tails+1))
+		fi
 done
+
+	if [ $HEADS -gt $TAILS ]
+	then
+		echo "HEADS WON"
+	else
+		echo "TAILS WON"
+	fi

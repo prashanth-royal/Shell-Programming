@@ -4,7 +4,7 @@ read -p "Guess my number: " USER_NUM
 
 SYSTEM_NUM=$(( ($RANDOM%89) +10))
 
-if [ $USER_NUM -eq $SYSTEM_NUM ]
+if [ $SYSTEM_NUM -le $USER_NUM ]
 then
 	echo "Magic number is correct"
 else
