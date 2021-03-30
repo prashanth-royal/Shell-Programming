@@ -11,3 +11,4 @@ do
 		num=$((num/$i))
 	done
 done
+		echo ${num[@]}
